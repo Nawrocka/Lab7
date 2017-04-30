@@ -30,7 +30,16 @@ Figure::Figure()
 	name = "";
 	color = "";
 	pointers= new Point[4];
-	//wyzeruj
+	
+	for (int i = 0; i < 4; i++)
+	{
+		pointers[i] = 0;
+	}
+
+	for (int j = 0; j < 3; j++)
+	{
+		way[j] = 0;
+	}
 }
 
 Figure::Figure(string Name, string Color)
@@ -56,22 +65,7 @@ void Figure::Complement()
 	quicksort(way, 0, 2);
 }
 
-void Figure::Introduce()
-{
-	cout << "I'm a " << name << endl;
-}
-
-float Figure::Perimeter()
-{
-	return 0.0f;
-}
-
-float Figure::Area()
-{
-	return 0.0f;
-}
-
-Figure::~Figure()
+Figure:: ~Figure() 
 {
 	delete[] pointers;
 }

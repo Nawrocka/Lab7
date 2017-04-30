@@ -6,7 +6,9 @@ class Quadrangle : public Figure
 	float e, f, angle;;
 public:
 	Quadrangle(string Name, string Color);
+	Quadrangle();
 
+	void virtual Introduce();
 	float Perimeter() override;
 	float Area() override;
 
@@ -15,6 +17,6 @@ public:
 	friend float diagonal(Point * pointers, int i);
 	friend bool IsItQuadrangle(Point* pointers);
 
-	~Quadrangle();
+	virtual ~Quadrangle();
 };
 

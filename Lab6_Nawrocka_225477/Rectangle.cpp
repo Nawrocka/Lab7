@@ -9,14 +9,25 @@ Rectangle::Rectangle(string Name, string Color) :Figure(Name, Color)
 	bool check = true;
 	while (check)
 	{
-		Complement();
-		if (way[2] != sqrt( pow(way[0], 2) + pow(way[1], 2) ))
+		if ((way[2] != sqrt(pow(way[0], 2) + pow(way[1], 2))) || (way[0]==0))
 		{
+			Complement();
 			cout << "It's not a square!" << endl << "Pick one more time: " << endl;
 		}
 		else check = false;
 	}
 }
+
+Rectangle::Rectangle():Figure()
+{
+}
+
+void Rectangle::Introduce()
+{
+	cout << "I'm a Rectangle " << name << endl;
+	cout << "My color is beautifull:  " << color << endl;
+}
+
 
 float Rectangle::Perimeter()
 {
@@ -32,5 +43,4 @@ float Rectangle::Area()
 
 Rectangle::~Rectangle()
 {
-	delete[] pointers;
 }

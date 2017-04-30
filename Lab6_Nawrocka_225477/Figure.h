@@ -16,14 +16,14 @@ public:
 	Figure(string Name, string Color);
 	Figure();
 	void Complement();
-	void Introduce();
-	float virtual Perimeter();
-	float virtual Area();
+	void virtual Introduce()=0;
+	float virtual Perimeter()=0;
+	float virtual Area()=0;
 	friend float distance(Point *pointers,int i);
 	void quicksort(float* way, int left, int right);
 
 	friend istream& operator>>(istream& o, Point& xy);
 
-	~Figure();
+	virtual ~Figure();
 };
 

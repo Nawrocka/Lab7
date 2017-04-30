@@ -115,7 +115,7 @@ int main()
 	string name, color;
 	cout << "Made 4 figures: square, rectangle, diamond and quadrangle." << endl;
 	string Types[] = { "Square","Rectangle","Diamond","Quadrangle" };
-	Figure tab[4];
+	Figure* tab[4];
 	Figure* wskS=nullptr; 
 
 	for (int i = 0; i < 4; i++)
@@ -137,7 +137,7 @@ int main()
 		case 1:
 		{
 			Rectangle prostok¹t(name, color);
-			*wskS = prostok¹t;
+			wskS = &prostok¹t;
 			ShowFIgure(wskS);
 			break;
 		}

@@ -26,6 +26,16 @@ Quadrangle::Quadrangle(string Name, string Color) :Figure(Name, Color)
 	} while ((angle > 90) && (IsItQuadrangle));
 }
 
+Quadrangle::Quadrangle():Figure()
+{
+}
+
+void Quadrangle::Introduce()
+{
+	cout << "I'm a Quadrangle " << name << endl;
+	cout << "My color is beautifull:  " << color << endl;
+}
+
 float Quadrangle::Perimeter()
 {
 	float way[4];
@@ -52,5 +62,4 @@ float Quadrangle::Area()
 
 Quadrangle::~Quadrangle()
 {
-	delete[] pointers;
 }

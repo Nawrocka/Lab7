@@ -26,6 +26,12 @@ Point& Point::operator=(const Point& right)
 	return *this;
 }
 
+void Point::operator=(const int number)
+{
+	this->_x = 0;
+	this->_y = 0;
+}
+
 Point::~Point()
 {
 }

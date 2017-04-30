@@ -7,9 +7,10 @@ public:
 	Square(string Name, string Color);
 	Square();
 
+	void virtual Introduce();
 	float Perimeter() override;
 	float Area() override;
 
-	~Square();
+	virtual ~Square();
 };
 

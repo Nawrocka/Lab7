@@ -9,15 +9,25 @@ Diamond::Diamond(string name, string color) :Figure(name, color)
 	
 	while (check)
 	{
-		Complement();
 		a = IsItDiamond(pointers);
 
 		if ((a==0) && (way[2] == way[0] * sqrt(2)))
 		{
+			Complement();
 			cout << "It's not a square!" << endl << "Pick one more time: " << endl;
 		}
 		else check = false;
 	}
+}
+
+Diamond::Diamond():Figure()
+{
+}
+
+void Diamond::Introduce()
+{
+	cout << "I'm a Diamond " << name << endl;
+	cout << "My color is beautifull:  " << color << endl;
 }
 
 float Diamond::Perimeter()
@@ -47,5 +57,4 @@ float Diamond::Area()
 
 Diamond::~Diamond()
 {
-	delete[] pointers;
 }

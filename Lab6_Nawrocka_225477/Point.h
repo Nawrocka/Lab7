@@ -12,6 +12,7 @@ public:
 	Point(float X1, float Y1);
 
 	Point& operator=(const Point& right);
+	void operator=(const int number);
 	friend istream& operator>>(istream& o, Point& xy);
 	
 	friend float IsItDiamond(Point *pointers);
