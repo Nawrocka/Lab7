@@ -130,7 +130,7 @@ int main()
 		case 0:
 		{
 			Square kwadrat(name, color);
-			*wskS = kwadrat;
+			wskS = &kwadrat;
 			ShowFIgure(wskS);
 			break;
 		}

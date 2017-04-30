@@ -71,28 +71,6 @@ float Figure::Area()
 	return 0.0f;
 }
 
-Figure& Figure::operator=(const Figure& right)
-{
-	if (this == &right)
-	{
-		return *this;
-	}
-
-	if (pointers != nullptr) //skad ten blad, co o za blad???
-	{
-		delete[] pointers;
-		pointers = nullptr;
-	}
-
-	pointers = new Point[4];
-	for (int index = 0; index < 4; ++index)
-	{
-		pointers[index] = right.pointers[index]; //operator przyrownania jest w point.h wiec dobrze?
-	}
-
-	return *this;
-}
-
 Figure::~Figure()
 {
 	delete[] pointers;

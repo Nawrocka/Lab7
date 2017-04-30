@@ -21,7 +21,6 @@ public:
 	float virtual Area();
 	friend float distance(Point *pointers,int i);
 	void quicksort(float* way, int left, int right);
-	Figure& operator=(const Figure& right);
 
 	friend istream& operator>>(istream& o, Point& xy);
 
