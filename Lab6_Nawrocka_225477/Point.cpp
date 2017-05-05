@@ -14,6 +14,17 @@ Point::Point(float X1, float Y1)
 	_y = Y1;
 }
 
+float Point::GetX()
+{
+	
+	return _x;
+}
+
+float Point::GetY()
+{
+	return _y;
+}
+
 Point& Point::operator=(const Point& right)
 {
 	if (this == &right)
@@ -30,8 +41,4 @@ void Point::operator=(const int number)
 {
 	this->_x = 0;
 	this->_y = 0;
-}
-
-Point::~Point()
-{
 }

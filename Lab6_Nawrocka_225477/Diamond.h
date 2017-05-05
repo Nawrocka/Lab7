@@ -11,7 +11,7 @@ public:
 	void virtual Introduce();
 	float Perimeter() override;
 	float Area() override;
-	friend float IsItDiamond(Point *pointers);
+	float IsItDiamond(Point *pointers);
 
 	virtual ~Diamond();
 };

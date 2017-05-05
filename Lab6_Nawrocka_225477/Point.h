@@ -11,18 +11,22 @@ public:
 	Point();
 	Point(float X1, float Y1);
 
+	float GetX();
+	float GetY();
+
 	Point& operator=(const Point& right);
 	void operator=(const int number);
+
+
 	friend istream& operator>>(istream& o, Point& xy);
 	
-	friend float IsItDiamond(Point *pointers);
+	/*friend float IsItDiamond(Point *pointers);
 	friend float distance(Point *pointers, int i);
 
 	friend void LengthsOfSides(Point *pointers,float* way);
 	friend float Factor(Point *pointers, int i);
 	friend float diagonal(Point * pointers, int i);
-	friend bool IsItQuadrangle(Point* pointers);
+	friend bool IsItQuadrangle(Point* pointers);*/
 	
-	~Point();
 };
 

@@ -12,10 +12,10 @@ public:
 	float Perimeter() override;
 	float Area() override;
 
-	friend void LengthsOfSides(Point *pointers, float* way);
-	friend float Factor(Point *pointers,int i);
-	friend float diagonal(Point * pointers, int i);
-	friend bool IsItQuadrangle(Point* pointers);
+	void LengthsOfSides(Point *pointers, float* way);
+	float Factor(Point *pointers,int i);
+	float diagonal(Point * pointers, int i);
+	bool IsItQuadrangle(Point* pointers);
 
 	virtual ~Quadrangle();
 };

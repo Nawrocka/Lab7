@@ -19,7 +19,7 @@ public:
 	void virtual Introduce()=0;
 	float virtual Perimeter()=0;
 	float virtual Area()=0;
-	friend float distance(Point *pointers,int i);
+	float distance(Point *pointers,int i);
 	void quicksort(float* way, int left, int right);
 
 	friend istream& operator>>(istream& o, Point& xy);

@@ -11,8 +11,8 @@ Rectangle::Rectangle(string Name, string Color) :Figure(Name, Color)
 	{
 		if ((way[2] != sqrt(pow(way[0], 2) + pow(way[1], 2))) || (way[0]==0))
 		{
-			Complement();
 			cout << "It's not a square!" << endl << "Pick one more time: " << endl;
+			Complement();
 		}
 		else check = false;
 	}

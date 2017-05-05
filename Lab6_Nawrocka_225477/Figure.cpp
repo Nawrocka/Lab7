@@ -65,6 +65,14 @@ void Figure::Complement()
 	quicksort(way, 0, 2);
 }
 
+float Figure::distance(Point * pointers, int i)
+{
+	float way = 0;
+	Point a = pointers[0];
+	way = sqrt(pow(a.GetX() -pointers[i].GetX(), 2) + pow(a.GetY() - pointers[i].GetY(), 2));
+	return way;
+}
+
 Figure:: ~Figure() 
 {
 	delete[] pointers;

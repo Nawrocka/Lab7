@@ -6,9 +6,11 @@ using namespace std;
 Square::Square(string Name, string Color):Figure( Name, Color)
 {
 	bool check = true;
+	
 	while(check)
-	{
-		if ((way[0] != way[1]) || ((way[2]) != (way[0] * sqrt(2))) || (way[0]==0))//dlaczego jak wpisuje (2 2) (0 0) (2 0) (0 2) to mi wchodzi , a i tak wszystkie przypadki wychodz¹ mi false...?!)
+	{		
+		float helper = way[0] * sqrt(2);
+		if ((way[0] != way[1]) || ((way[2]) !=helper)  || (way[0]==0))//dlaczego jak wpisuje (2 2) (0 0) (2 0) (0 2) to mi wchodzi , a i tak wszystkie przypadki wychodz¹ mi false...?!)
 		{
 			cout << "It's not a square!" << endl << "Pick one more time: " << endl;
 			Complement();

@@ -11,10 +11,10 @@ Diamond::Diamond(string name, string color) :Figure(name, color)
 	{
 		a = IsItDiamond(pointers);
 
-		if ((a==0) && (way[2] == way[0] * sqrt(2)))
+		if ((a==0) || (way[2] == way[0] * sqrt(2)))
 		{
-			Complement();
 			cout << "It's not a square!" << endl << "Pick one more time: " << endl;
+			Complement();
 		}
 		else check = false;
 	}
@@ -53,6 +53,26 @@ float Diamond::Area()
 	perimeter=(e*f)/2;
 
 	return perimeter;
+}
+
+
+float Diamond::IsItDiamond(Point *pointers)
+{
+	float way[4];
+	int check = 0;
+	for (int i = 0; i < 4; i++)
+	{
+		if (i == 3) way[i] = sqrt(pow(pointers[i].GetX() - pointers[0].GetX(), 2) + pow(pointers[i].GetY() - pointers[0].GetY(), 2));
+		else way[i] = sqrt(pow(pointers[i].GetX()- pointers[i + 1].GetX(), 2) + pow(pointers[i].GetY() - pointers[i + 1].GetY(), 2));
+	}
+
+	for (int j = 1; j < 4; j++)
+	{
+		if (way[0] == way[j]) check++;
+	}
+
+	if (check == 3) return way[0];
+	return 0;
 }
 
 Diamond::~Diamond()
